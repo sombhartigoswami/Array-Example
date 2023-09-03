@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array example</title>
+</head>
+<body>
+<script>
+
+// 1.sum of array
+
+// var myarray= [10,20,30,40,50];
+// var sum =0;
+// for( var a=0; a<=4; a++){
+//     document.write(myarray[a]+"<br>");
+//     sum= sum+myarray[a];
+// }
+// document.write("total:"+sum);
+
+
+//2.get value from user to creat a array
+
+//  var uarray= new Array(10);
+// for( var g=0; g<10; g++){
+//     uarray[g]= prompt(" please enter the value");
+// }
+
+// for( var b= 0; b<10; b++){
+//     document.write( b+ ":"+uarray[b]+"<br>");
+// }
+
+
+//3. create  a maltidimensional array
+
+// var myarray=[
+// [ "anil",19,"male","delhi"],
+// ["som",19,"male","delhi"],
+// ["suru",19,"male","delhi"],
+// ["suru",19,"male","delhi"],
+// ["suru",19,"male","delhi"],
+// ["suru",19,"male","delhi"],
+// ["suru",19,"male","delhi"],
+// ["suru",19,"male","delhi"],
+// ["sahil",19,"male","delhi"]
+// ];
+
+// for( var a=0; a<myarray.length; a++){
+//     for( var b=0; b<4; b++){
+//         document.write( myarray[a] [b]+" ")
+//     }
+//     document.write("<br>")
+// }
+
+//4. modify and delete a array 
+
+// var myarray=["anil","som","sonu",22];
+// document.write(myarray+"<br>");
+// //modify
+// myarray[1]="suru";
+// document.write(myarray+"<br>");
+// //delete 
+// delete myarray[3];
+// document.write(myarray+"<br>");
+
+//5. sort and reverse given array
+
+// var myarray=["som","rahul","anil","bulbul"];
+// document.write(myarray+"<br>");
+// //sort
+// myarray.sort();
+// document.write(myarray+"<br>");
+// //reverse
+// myarray.reverse();
+// document.write(myarray+"<br>");
+
+//6. delete last value of  array ,and  add a new value to the last place of an given array
+
+// var myarray=["som ","rahul","anil","sahil"];
+// document.write(myarray+"<br>" +"<br>");
+// //delete last value
+// myarray.pop();
+// document.write(myarray+"<br>" +"<br>");
+// //add value to the last place
+// myarray.push("simran");
+// document.write(myarray+"<br>" +"<br>");
+
+
+//7. delete the first index value of an array and add a new value to the first place
+
+// var myarray=["anil","simran","rahul","seemi"];
+// document.write(myarray+"<br>" +"<br>");
+// //delete first index value
+// myarray.shift();
+// document.write(myarray+"<br>" +"<br>");
+// //add a new value to the first place
+// myarray.unshift("surender");
+// document.write.(myarray+"<br>" +"<br>");
+
+
+//8.merge two arrays
+
+// var a=["anil","som","sahil"];
+// var b=["monu","himanshu"];
+// // var c= a.concat(b);
+// // document.write(c);
+// document.write([...a,...b]);
+// //note:-both methods are right
+
+
+//9.convert an array values into string
+
+// var myarray=["anil","sahil","somi","rekha"];
+// document.write(myarray+"<br>");
+// myarray.toString();
+// //myarray.join();
+// document.write(myarray);
+
+
+//10.extract an array(some values) from existing array 
+
+// var myarray=["anil","som","suru","rahul","simran"];
+// document.write(myarray+"<br>");
+// var b= myarray.slice(2,4);
+// document.write(b);
+
+
+//11 add new value in an existing array
+
+// var myarray=["anil","som","suru","rahul","simran"];
+// document.write(myarray+"<br>");
+// myarray.splice(3,0,"nishant","sushant");
+// document.write(myarray)
+
+
+//12.check any variable is an array or not
+
+// var a=10;
+// // var myarray=["sahil","rahul"];
+
+// if(Array.isArray( a)){
+//     document.write("this is Array");
+// }else{
+//     document.write("this is not an array");
+// }
+
+
+//13.find index no. of array element
+
+// var myarray=["anil","rahul","som","anil","som","karan"];
+// var b= myarray.indexOf("som",3);
+// document.write(b+"<br>");
+// var b= myarray.lastIndexOf("som",3);
+// document.write(b+"<br>");
+
+
+//14.check any(all) element(elements) of an array pass a test or not 
+
+// var ages =[11,18,33,19,10,33];
+// document.write(ages+"<br>");
+
+// function checkadult(getage){
+// return getage<=18;
+// }
+
+//  var b= ages.findIndex(checkadult); //every() //some() // find() //findindex()
+// document.write(b);
+
+
+
+
+//15. (1)fliter()
+
+// var ages=[10,12,13,18,33,44,55];
+// document.write(ages+"<br>");
+
+// var newarray= ages.filter(checkadult);
+// document.write(newarray);
+
+// function checkadult(getage){
+// return getage>=18;
+//}
+
+
+//16.forEach loop for array (we can also use forloop for array)
+
+// var myarray=["anil","som","sahil","manish"];
+// myarray.forEach(loop);
+// function loop( value,index){
+//     document.write( index +":"+value+"<br>")
+// }
+
+
+//17. convert a string into Array
+
+// var myarray= ["somvati"];
+// document.write(myarray+"<br>");
+// var a= Array.from("somvati");
+// document.write(a);
+
+
+//18.when  arrays inside an array
+
+// let myarray=[1,2,3,[4,5,6],7,[6,7],[4,5]];
+// let a= myarray.flat(Infinity);
+// document.write(a);
+
+//19.convert into an array to the given element
+
+// let a=100;
+// let b=200;
+// let c=300;
+// console.log(Array.of(a,b,c));
+
+//20.(1) ex of map()
+
+// let myarray=[10,20,30,40];
+
+// let b= myarray.map( calculation);
+// document.write(b);
+// function calculation(x){
+//     return x*10;
+// }
+
+//21.(2) find out  name property from array of object with the help of Map()
+
+// let myarray=[
+// {name:"anil",lname:"kumar"},
+// {name:"sunil",lname:"kapra"},
+// {name:"joni",lname:"singh"},
+// {name:"rohan",lname:"goswami"}
+
+
+// ];
+//  let b= myarray.map( findout);
+//  document.write(b);
+//   function findout(x){
+//     return x.name; //if last name then x.lname
+//   }
+
+
+// 22.(2) fliter example
+
+// const companies=[
+// { name:"google", category:"product"},
+// { name:"microsoft", category:"product"},
+// { name:"addidas", category:"service"},
+// { name:"infosiys", category:"service"}
+
+// ];
+
+// const b= companies.filter(newarray);
+// console.log(b);
+
+// function newarray(x){
+//     return x.category==="service";
+// }
+
+
+//23.pass an array into function return second value of array
+// const myarray=[200,300,400,500,600];
+// document.write(myarray+"<br>")
+//  function secondvalue( getarray){
+// return getarray[1];
+//  }
+//  document.write(secondvalue(myarray));
+
+
+//24.(2) sort example
+// let myarray=[10,3,4,6,11,5,7,89,];
+// document.write(myarray+"<br>");
+// myarray.sort( comparison);
+
+// function comparison(a,b){
+//     return a-b; //ascending order
+// }                //if we want descending order(b-a);
+// document.write(myarray);
+
+
+
+//25.(3)sort example
+// let myarray=[
+// { name:"anil",age:10},
+// {name:"som",age:22},
+// {name:"sahil",age:20},
+// {name:"rani",age:11}
+
+// ]
+// function sortage(a,b){
+//     return  b.age-a.age;
+// }
+// myarray.sort(sortage);
+// console.log(myarray);
+
+
+
+
+// //26. Reduce example
+// let myarray=[10,20,30,40,50];
+// document.write(myarray+"<br>");
+
+// function total( a,b){
+//     return a+b;
+// }
+
+// let b=myarray.reduce(total);
+// document.write(b);
+
+
+</script>
+
+
+</body>
+</html>
